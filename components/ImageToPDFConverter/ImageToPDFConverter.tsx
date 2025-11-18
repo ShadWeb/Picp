@@ -5,6 +5,7 @@ import { useRef, useCallback, useEffect } from "react";
 import { useConverterStore } from "@/stores/useConverterStore";
 import { useConverterActions } from "@/hooks/useConverterActions";
 import { UploadStep } from "./UploadStep";
+import { ImageFile } from "@/types";
 import { SettingsStep } from "./SettingsStep";
 import { ConvertStep } from "./ConvertStep";
 import { ProgressSteps } from "./ProgressSteps";

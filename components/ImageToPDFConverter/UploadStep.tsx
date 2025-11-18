@@ -1,8 +1,9 @@
 // components/ImageToPDFConverter/UploadStep.tsx
-import { useCallback, useState } from "react";
 import { useConverterStore } from "@/stores/useConverterStore";
+import { useDragAndDrop } from "@/hooks/useDragAndDrop";
 import { ImageGrid } from "./ImageGrid";
 import { Upload, Plus } from "lucide-react";
+import { ImageFile } from "@/types";
 
 interface UploadStepProps {
   onAddMoreClick: () => void;
@@ -17,45 +18,8 @@ export const UploadStep = ({
   onImagePreview,
   onNextStep,
 }: UploadStepProps) => {
-  const { images, isDragging, setIsDragging } = useConverterStore();
-  const [dragCounter, setDragCounter] = useState(0);
-
-  const handleDragOver = useCallback(
-    (e: React.DragEvent) => {
-      e.preventDefault();
-      setIsDragging(true);
-    },
-    [setIsDragging]
-  );
-
-  const handleDragLeave = useCallback(
-    (e: React.DragEvent) => {
-      e.preventDefault();
-      setDragCounter((prev) => {
-        const newCounter = prev - 1;
-        if (newCounter === 0) {
-          setIsDragging(false);
-        }
-        return newCounter;
-      });
-    },
-    [setIsDragging]
-  );
-
-  const handleDragEnter = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setDragCounter((prev) => prev + 1);
-  }, []);
-
-  const handleDrop = useCallback(
-    (e: React.DragEvent) => {
-      e.preventDefault();
-      setIsDragging(false);
-      setDragCounter(0);
-      onFileSelect(e.dataTransfer.files);
-    },
-    [onFileSelect, setIsDragging]
-  );
+  const { images } = useConverterStore();
+  const { isDragging, dragHandlers } = useDragAndDrop(onFileSelect);
 
   // When no images uploaded
   if (images.length === 0) {
@@ -71,10 +35,7 @@ export const UploadStep = ({
               ? "border-primary/50 bg-primary/5"
               : "border-gray-300/50 dark:border-gray-600/50 bg-white/10 dark:bg-black/10"
           }`}
-          onDragOver={handleDragOver}
-          onDragEnter={handleDragEnter}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
+          {...dragHandlers}
         >
           <Upload className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto text-primary mb-2 sm:mb-3 md:mb-4" />
           <p className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
@@ -118,7 +79,10 @@ export const UploadStep = ({
         </div>
       </div>
 
-      <ImageGrid onImagePreview={onImagePreview} />
+      <ImageGrid
+        onImagePreview={onImagePreview}
+        onAddMoreClick={onAddMoreClick}
+      />
 
       <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-300/50 dark:border-gray-600/50">
         <button

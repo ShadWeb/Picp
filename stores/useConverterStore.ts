@@ -8,6 +8,8 @@ import {
   ConversionProgress,
   AppStep,
 } from "@/types";
+import { validateFile, generateId } from "@/lib/utils";
+import { arrayMove } from "@dnd-kit/sortable";
 
 interface ConverterState {
   // State
@@ -83,6 +85,12 @@ export const useConverterStore = create<ConverterState>()(
               name: file.name,
               file,
             });
+          } else {
+            console.warn("Invalid file:", file.name, validation.error);
+            // نمایش alert برای کاربر
+            if (validation.error) {
+              alert(validation.error);
+            }
           }
         });
 

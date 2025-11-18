@@ -15,14 +15,20 @@ import {
   sortableKeyboardCoordinates,
   rectSortingStrategy,
 } from "@dnd-kit/sortable";
-import { ImagePreview } from "../ImagePreview";
+
 import { Plus } from "lucide-react";
+import ImagePreview from "../ImagePreview";
+import { ImageFile } from "@/types";
 
 interface ImageGridProps {
   onImagePreview: (image: ImageFile) => void;
+  onAddMoreClick: () => void;
 }
 
-export const ImageGrid = ({ onImagePreview }: ImageGridProps) => {
+export const ImageGrid = ({
+  onImagePreview,
+  onAddMoreClick,
+}: ImageGridProps) => {
   const { images, reorderImages, deleteImage, updateImage, moveImage } =
     useConverterStore();
 
@@ -97,7 +103,7 @@ export const ImageGrid = ({ onImagePreview }: ImageGridProps) => {
                 />
               ))}
               <button
-                onClick={() => document.getElementById("file-input")?.click()}
+                onClick={onAddMoreClick}
                 className="aspect-[4/3] border-2 border-dashed border-gray-300/50 dark:border-gray-600/50 
                 rounded-lg flex flex-col items-center justify-center gap-1 sm:gap-2 
                 hover:border-primary/50 hover:bg-primary/5 transition backdrop-blur-sm glass-effect 

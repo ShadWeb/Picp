@@ -1,7 +1,9 @@
 // components/ImageToPDFConverter/SettingsStep.tsx
 import { useConverterStore } from "@/stores/useConverterStore";
-import { PDFPreview } from "./PDFPreview";
+
 import { Settings, ChevronRight, ChevronLeft, Plus } from "lucide-react";
+import { PDFSettings } from "@/types";
+import { PDFPreview } from "./PDFPreview";
 
 interface SettingsStepProps {
   onAddMoreClick: () => void;

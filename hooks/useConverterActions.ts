@@ -11,7 +11,6 @@ export const useConverterActions = () => {
     setConversionProgress,
     setPdfBlob,
     reset,
-    addImages,
   } = useConverterStore();
 
   const handleConvert = useCallback(async () => {
@@ -113,6 +112,5 @@ export const useConverterActions = () => {
     handleDownloadPDF,
     handleDownloadZIP,
     resetConverter: reset,
-    addImages,
   };
 };
