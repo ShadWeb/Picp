@@ -71,6 +71,7 @@ export default function FeaturesSection() {
               <img
                 src={feature.image}
                 alt={feature.title}
+                title={feature.title}
                 className="h-38 w-38 object-contain"
               />
             </div>

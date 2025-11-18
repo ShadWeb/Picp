@@ -1,7 +1,7 @@
 "use client";
 
 import { Upload, Play, Zap, Shield, Smartphone, Star } from "lucide-react";
-import ImageToPDFConverter from "./ImageToPDFConverter";
+import ImageToPDFConverter from "./ImageToPDFConverter/ImageToPDFConverter";
 import Image from "next/image";
 
 interface HeroProps {
@@ -46,10 +46,7 @@ export default function Hero({ onUploadClick }: HeroProps) {
 
           {/* دکمه‌های اقدام */}
           <div className="flex flex-col sm:flex-row justify-center @[864px]:justify-start items-center gap-3">
-            <button
-              onClick={onUploadClick}
-              className="group flex items-center justify-center gap-2 min-w-[180px] h-12 px-6 bg-primary text-white rounded-lg font-bold text-base hover:bg-primary/90 transition-colors duration-200 shadow-lg shadow-primary/25"
-            >
+            <button className="group flex items-center justify-center gap-2 min-w-[180px] h-12 px-6 bg-primary text-white rounded-lg font-bold text-base hover:bg-primary/90 transition-colors duration-200 shadow-lg shadow-primary/25">
               <Upload className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
               <span>شروع تبدیل رایگان</span>
             </button>

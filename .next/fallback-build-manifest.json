@@ -1,28 +1,42 @@
 {
   "pages": {
     "/_app": [
-      "static/chunks/fbe78ee9f389271a.js",
-      "static/chunks/d79a063d4864a51e.js",
-      "static/chunks/c7b553df022ba1f7.js",
-      "static/chunks/fffc5367e0467dfb.js",
-      "static/chunks/bd00876a53f5c5ec.js",
-      "static/chunks/a5631d94ea37f3e4.js",
-      "static/chunks/f1dae2d7696614d1.css",
-      "static/chunks/turbopack-0bb952755ff9b952.js"
+      "static/chunks/node_modules_c0a1a115._.js",
+      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_5277ebc8.js",
+      "static/chunks/node_modules_next_dist_compiled_166120c5._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_2c2ec201._.js",
+      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
+      "static/chunks/node_modules_next_dist_2e2215b7._.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_framer-motion_dist_es_bab6b987._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_0ab97e45._.js",
+      "static/chunks/node_modules_19306ed0._.js",
+      "static/chunks/[root-of-the-server]__60c3af2d._.js",
+      "static/chunks/[root-of-the-server]__aba6b523._.css",
+      "static/chunks/pages__app_2da965e7._.js",
+      "static/chunks/turbopack-pages__app_e944d237._.js"
     ],
     "/_error": [
-      "static/chunks/d6f627d2d055499f.js",
-      "static/chunks/a5631d94ea37f3e4.js",
-      "static/chunks/bd00876a53f5c5ec.js",
-      "static/chunks/turbopack-8a36bc38237226ee.js"
+      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_5277ebc8.js",
+      "static/chunks/node_modules_next_dist_compiled_166120c5._.js",
+      "static/chunks/node_modules_next_dist_shared_lib_b4122b32._.js",
+      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
+      "static/chunks/node_modules_next_dist_0cccb603._.js",
+      "static/chunks/node_modules_next_error_1cfbb379.js",
+      "static/chunks/[next]_entry_page-loader_ts_43b523b5._.js",
+      "static/chunks/node_modules_react-dom_4411d9bd._.js",
+      "static/chunks/node_modules_db4bb196._.js",
+      "static/chunks/[root-of-the-server]__092393de._.js",
+      "static/chunks/pages__error_2da965e7._.js",
+      "static/chunks/turbopack-pages__error_18aa0e75._.js"
     ]
   },
   "devFiles": [],
   "ampDevFiles": [],
   "polyfillFiles": [],
   "lowPriorityFiles": [
-    "static/vVzXndPtgR_9MJ4r4oGx6/_ssgManifest.js",
-    "static/vVzXndPtgR_9MJ4r4oGx6/_buildManifest.js"
+    "static/development/_ssgManifest.js",
+    "static/development/_buildManifest.js"
   ],
   "rootMainFiles": [],
   "ampFirstPages": []

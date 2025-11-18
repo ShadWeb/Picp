@@ -16,29 +16,20 @@ export default function Footer() {
           <div className="flex-1 max-w-md">
             <div className="flex items-center gap-3 mb-4">
               <div className="flex gap-2 items-center  text-[#111318] dark:text-black">
-                <div className=" text-primary ">
-                  <div className="size-8 text-primary">
-                    <svg
-                      fill="none"
-                      viewBox="0 0 48 48"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clipRule="evenodd"
-                        d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
-                        fill="currentColor"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  {/* <Image
-                    src={"images/picmatn.png"}
-                    width={60}
-                    height={60}
-                    alt="تبدیل عکس به پی دی اف"
-                  /> */}
-                </div>
                 <h2 className="text-xl font-bold tracking-[-0.015em]">Picp</h2>
+                <div className=" text-primary ">
+                  <div className="size-12 text-primary">
+                    <Image
+                      src={"/images/picp.png"}
+                      alt=" تبدیل عکس به پی دی اف آنلاین | تبدیل چند عکس به یک فایل PDF در گوشی و
+          آیفون"
+                      title=" تبدیل عکس به پی دی اف آنلاین | تبدیل چند عکس به یک فایل PDF در گوشی و
+          آیفون"
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+                </div>
               </div>
               {/* <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 تبدیل پی دی اف به عکس
@@ -200,6 +191,8 @@ export default function Footer() {
               <div className=" w-fit p-3 px-8 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
                 <Image
                   alt="Vada Logo"
+                  title=" VADA ارائه خدمات دیجیتال برای انتشار محتوای منحصربه‌فرد در پلتفرم‌های موبایل
+"
                   src="/images/vada_logo.png"
                   height={150}
                   width={150}
