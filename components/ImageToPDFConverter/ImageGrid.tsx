@@ -17,8 +17,9 @@ import {
 } from "@dnd-kit/sortable";
 
 import { Plus } from "lucide-react";
-import ImagePreview from "../ImagePreview";
+import ImagePreview from "./ImagePreview";
 import { ImageFile } from "@/types";
+import MemoryMonitor from "../MemoryMonitor";
 
 interface ImageGridProps {
   onImagePreview: (image: ImageFile) => void;
@@ -73,6 +74,9 @@ export const ImageGrid = ({
 
   return (
     <div className="flex flex-col gap-5">
+      {/* <div className="p-4 bg-black/80 text-white rounded-lg">
+        <MemoryMonitor images={images} />
+      </div> */}
       <DndContext
         sensors={sensors}
         collisionDetection={closestCenter}

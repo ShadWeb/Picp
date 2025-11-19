@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import Footer from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton/BackToTopButton";
 import Head from "next/head";
+import VideoIntroSection from "@/components/VideoIntroSection";
 
 export default function Home() {
   const handleUploadSectionClick = () => {
@@ -71,7 +72,7 @@ export default function Home() {
 
               <main className="flex flex-col gap-16 md:gap-24 ">
                 <Hero onUploadClick={handleUploadSectionClick} />
-
+                <VideoIntroSection />
                 <section id="upload-section" className="scroll-mt-24"></section>
 
                 <FeaturesSection />

@@ -1,3 +1,4 @@
+///home/lib/pdfConverter.ts
 import { ImageFile, PDFSettings, ConversionProgress } from "@/types";
 import jsPDF from "jspdf";
 

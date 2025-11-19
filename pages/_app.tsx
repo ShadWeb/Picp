@@ -15,6 +15,7 @@ const splineSans = Spline_Sans({
 });
 import { HeroUIProvider, ToastProvider } from "@heroui/react";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import MemoryMonitor from "@/components/MemoryMonitor";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <HeroUIProvider className={vazirmatn.className}>
